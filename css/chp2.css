@@ -1,0 +1,40 @@
+ul {
+    list-style: none;
+}
+
+li {
+    width: 150px;
+    height: 20px;
+    background-color: gray;
+    margin-top: 10px;
+    cursor: pointer;
+    text-align: center;
+    padding-top: 2px;
+}
+
+.no-styles {
+    background-color: inherit;
+}
+
+.bg-red {
+    background-color: red;
+}
+
+.for-scroll {
+    width: 150px;
+    height: 100px;
+    overflow: scroll;
+}
+
+.go {
+    width: 140px;
+    height: 30px;
+    background-color: cadetblue;
+    text-align: center;
+    padding-top: 10px;
+    margin: 20px 0 0 43px;
+}
+
+a {
+    text-decoration: none;
+}
