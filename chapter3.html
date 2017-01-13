@@ -3,11 +3,51 @@
     <head>
         <meta charset="UTF-8">
         <title>Chapter-3</title>
+        <link href="css/chp3.css" rel="stylesheet">
     </head>
     <body>
-
-
+    <form>
+        <fieldset>
+            <legend>Chapter #3</legend>
+            <label  for="name">Имя</label>
+            <input type="text" id="name" name="name"><br>
+            <label  for="sname">Фамилия</label>
+            <input type="text" id="sname" name="surname"><br>
+            <label  for="fname">Отчество</label>
+            <input type="text" id="fname" name="father-name"><br>
+            <hr>
+            Radio buttons<Br>
+            <label><input type="radio" class="gender" name="gender" value="Male">Male</label><Br>
+            <label><input type="radio" class="gender" name="gender" value="Female">Female</label><Br>
+            <hr>
+            Check Boxes <br>
+            <input type="checkbox" id="phone" name="phone" value="phone">
+            <label  for="phone">contact me by phone</label><br>
+            <input type="checkbox" id="email" name="email" value="email">
+            <label  for="email">contact me by email</label><br>
+            <hr>
+            Select fruit:
+            <select name="fruits">
+                <option value="Banana">Banana</option>
+                <option selected="selected" value="Apple">Apple</option>
+                <option value="Orange">Orange</option>
+                <option value="Pineapple">Pineapple</option>
+            </select>
+            <span class="selected"></span>
+            <hr>
+            <input type="checkbox" id="same" name="same">
+            <label  for="same">Cоздать Близнеца</label><br>
+            <label  for="twin-name">Имя</label>
+            <input type="text" id="twin-name" name="twin-name"><br>
+            <label  for="sname">Фамилия</label>
+            <input type="text" id="twin-sname" name="twin-surname"><br>
+            <label  for="fname">Отчество</label>
+            <input type="text" id="twin-fname" name="twin-father-name"><br>
+            <hr>
+            <input type="submit" value="Отправить">
+        </fieldset>
+    </form>
     <script src="//ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
-    <script src="js/chp1.js"></script>
+    <script src="js/chp3.js"></script>
     </body>
 </html>

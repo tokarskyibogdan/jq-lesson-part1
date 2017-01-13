@@ -1,6 +1,6 @@
 jQuery(function ($) {
     $('.add-class').on('click', function () {
-        $('.add-class').addClass('bg-red');
+        $(this).addClass('bg-red');
     });
     $('.remove-class').on('click', function () {
         $(this).removeClass('bg-red');
@@ -9,7 +9,7 @@ jQuery(function ($) {
         $(this).toggleClass('bg-red');
     });
     $('.get-attr').on('click', function () {
-        console.log($(this).attr('value'))
+        console.log(this.value)
     });
     $('.set-attr').on('click', function () {
         $(this).attr('disabled', 'disabled');
@@ -25,7 +25,7 @@ jQuery(function ($) {
         $(this).clone().attr('value', atr + ' - cloned').addClass('margin-top').insertAfter(this)
     });
     $('.closest').on('click', function () {
-        console.log($(this).parent())
+        console.log($(this).closest())
     });
 
     // $('.each-btn-text').on('click', function () {
@@ -49,15 +49,13 @@ jQuery(function ($) {
         $('.show-text').show()
     });
     $('.data').on('click', function () {
-        var h = $(this).height();
-        var w = $(this).width();
-        var position = $(this).offset();
-        var btnTxt = $(this).attr('value');
-        var btnType = $(this).attr('type');
-        var btnClass = $(this).attr('class');
-        var parent = $(this).parent();
+        var h = $(this).height(),
+            w = $(this).width(),
+            position = $(this).offset(),
+            attrs = this.attributes,
+            parent = $(this).parent();
         // var next = $(this).next().next();
         // var prev = $(this).prev().prev();
-        console.log("height",h,",","width",w,",","position of",position,",","class:",btnClass,",","type:",btnType,",","parent:",parent,",","text:",btnTxt)
+        console.log("height ",h,"width ",w,"position of ",position,"parent:",parent, attrs)
     });
 });
