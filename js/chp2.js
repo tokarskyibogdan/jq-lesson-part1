@@ -1,4 +1,8 @@
 jQuery(function ($) {
+    $('.data').on('click', function () {
+        $(this).data("myAge", 23);
+        console.log($('.data').data("myAge"))
+    });
     $('.detach').on('click', function () {
         $(this).detach();
     });
@@ -13,6 +17,9 @@ jQuery(function ($) {
     $('.html').on('click', function () {
         var a = $(this).html();
         console.log("inside this li:",a)
+    });
+    $('.index').on('click', function () {
+        console.log("My index is: " + $(this).index())
     });
     $('.off').on('mouseover', function () {
         $(this).off('mouseover');

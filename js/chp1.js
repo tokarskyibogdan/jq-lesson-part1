@@ -28,13 +28,14 @@ jQuery(function ($) {
         console.log($(this).closest())
     });
 
-    // $('.each-btn-text').on('click', function () {
-    //     var allAtrr = $('input').prop(map);
-    //     console.log(allAtrr)
-    // });
-
+    $('.each-btn-text').on('click', function () {
+        $("li").each(function(index) {
+            console.log(index + ": " + $(this).text());
+        });
+    });
     $('.find-me').on('click', function () {
-        console.log($(this).parents())
+        var a = $('body').find(this)[0];
+        console.log(a)
     });
     $('.fade-in-text-btn').click(function () {
         $('.fade-in-text').fadeIn(1000)
@@ -54,8 +55,6 @@ jQuery(function ($) {
             position = $(this).offset(),
             attrs = this.attributes,
             parent = $(this).parent();
-        // var next = $(this).next().next();
-        // var prev = $(this).prev().prev();
         console.log("height ",h,"width ",w,"position of ",position,"parent:",parent, attrs)
-    });
+    })
 });
